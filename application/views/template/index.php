@@ -9,6 +9,14 @@
         <!-- page css -->
         <!-- Core css -->
         <link href="<?=base_url('assets/enlink/css/app.min.css')?>" rel="stylesheet">
+        <?php
+            if ( isset($css) ){
+                foreach($css as $rows){
+                    $exp = explode(",", $rows);
+                    echo "<link type=\"{$exp[0]}\" rel=\"{$exp[1]}\" href=\"{$exp[2]}\" />\n";
+                }
+            }
+        ?>
     </head>
     <body>
         <div class="app">
@@ -95,6 +103,9 @@
                             </div>
                         </div>
                         <!-- Content goes Here -->
+                        <div id="content">
+                            <?=$contents?>
+                        </div>
                     </div>
                     <!-- Content Wrapper END -->
 
@@ -124,6 +135,14 @@
         <script src="<?=base_url('assets/enlink/js/vendors.min.js')?>"></script>
         <!-- page js -->
         <!-- Core JS -->
+        <script>var base_url = "<?=base_url()?>";</script>
+        <script>var site_url = "<?=site_url()?>";</script>
         <script src="<?=base_url('assets/enlink/js/app.min.js')?>"></script>
+        <?php
+            if ( isset($js) ){
+                foreach($js as $rows)
+                    echo "<script src=\"{$rows}\"></script>\n";		
+            }
+        ?>
     </body>
 </html>
