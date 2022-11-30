@@ -23,10 +23,10 @@
             <div class="layout">
                 <!-- Header START -->
                 <div class="header">
-                    <div class="logo logo-dark mt-3">
+                    <div class="logo logo-dark mt-2">
                         <a href="index.html">
-                            <img src="<?=base_url('assets/images/inventory/logo-gonusa-full.png')?>" alt="Logo" width="50%">
-                            <img class="logo-fold ml-3" src="<?=base_url('assets/images/inventory/logo-gonusa.png')?>" alt="Logo" width="50%">
+                            <img class="mt-1" src="<?=base_url('assets/images/inventory/logo-gonusa-full.png')?>" alt="Logo" width="50%">
+                            <img class="logo-fold mt-1 ml-3" src="<?=base_url('assets/images/inventory/logo-gonusa.png')?>" alt="Logo" width="50%">
                         </a>
                     </div>
                     <div class="nav-wrap">
